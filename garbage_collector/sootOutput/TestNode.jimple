@@ -1,0 +1,16 @@
+class TestNode extends java.lang.Object
+{
+    TestNode f;
+    TestNode g;
+
+    void <init>()
+    {
+        TestNode r0;
+
+        r0 := @this: TestNode;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+}

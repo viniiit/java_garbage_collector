@@ -1,0 +1,80 @@
+public class Test extends java.lang.Object
+{
+    public static TestNode global;
+
+    public void <init>()
+    {
+        Test r0;
+
+        r0 := @this: Test;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] r1;
+
+        r1 := @parameter0: java.lang.String[];
+
+        staticinvoke <Test: TestNode foo()>();
+
+        return;
+    }
+
+    public static TestNode foo()
+    {
+        TestNode $r0, $r2, $r8;
+        Child $r4;
+        SecondChild $r6;
+
+        $r0 = new TestNode;
+
+        specialinvoke $r0.<TestNode: void <init>()>();
+
+        $r2 = new TestNode;
+
+        specialinvoke $r2.<TestNode: void <init>()>();
+
+        $r4 = new Child;
+
+        specialinvoke $r4.<Child: void <init>()>();
+
+        $r6 = new SecondChild;
+
+        specialinvoke $r6.<SecondChild: void <init>()>();
+
+        $r8 = new TestNode;
+
+        specialinvoke $r8.<TestNode: void <init>()>();
+
+        $r0.<TestNode: TestNode f> = $r8;
+
+        staticinvoke <Test: void bar(TestNode,TestNode)>($r0, $r2);
+
+        virtualinvoke $r4.<Child: void baz(TestNode,TestNode)>($r0, $r2);
+
+        virtualinvoke $r6.<Child: void baz(TestNode,TestNode)>($r0, $r2);
+
+        return $r0;
+    }
+
+    public static void bar(TestNode, TestNode)
+    {
+        TestNode $r0, r2, r3;
+
+        r2 := @parameter0: TestNode;
+
+        r3 := @parameter1: TestNode;
+
+        $r0 = new TestNode;
+
+        specialinvoke $r0.<TestNode: void <init>()>();
+
+        r2.<TestNode: TestNode f> = $r0;
+
+        return;
+    }
+}

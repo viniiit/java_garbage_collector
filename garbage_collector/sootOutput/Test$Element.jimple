@@ -1,0 +1,38 @@
+class Test$Element extends java.lang.Object
+{
+    int data;
+    Test$Element next;
+
+    void <init>()
+    {
+        Test$Element r0;
+
+        r0 := @this: Test$Element;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        r0.<Test$Element: int data> = 0;
+
+        r0.<Test$Element: Test$Element next> = null;
+
+        return;
+    }
+
+    void <init>(int)
+    {
+        Test$Element r0;
+        int i0;
+
+        r0 := @this: Test$Element;
+
+        i0 := @parameter0: int;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        r0.<Test$Element: int data> = i0;
+
+        r0.<Test$Element: Test$Element next> = null;
+
+        return;
+    }
+}

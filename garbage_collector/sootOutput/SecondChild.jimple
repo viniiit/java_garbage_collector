@@ -1,0 +1,44 @@
+class SecondChild extends Child
+{
+
+    void <init>()
+    {
+        SecondChild r0;
+
+        r0 := @this: SecondChild;
+
+        specialinvoke r0.<Child: void <init>()>();
+
+        return;
+    }
+
+    public void baz(TestNode, TestNode)
+    {
+        Child $r0;
+        TestNode r2, $r3, r6;
+        java.io.PrintStream $r4;
+        SecondChild r5;
+
+        r5 := @this: SecondChild;
+
+        r2 := @parameter0: TestNode;
+
+        r6 := @parameter1: TestNode;
+
+        $r0 = new Child;
+
+        specialinvoke $r0.<Child: void <init>()>();
+
+        $r3 = new TestNode;
+
+        specialinvoke $r3.<TestNode: void <init>()>();
+
+        r2.<TestNode: TestNode f> = $r3;
+
+        $r4 = <java.lang.System: java.io.PrintStream out>;
+
+        virtualinvoke $r4.<java.io.PrintStream: void println(java.lang.Object)>($r0);
+
+        return;
+    }
+}

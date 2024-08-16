@@ -1,0 +1,34 @@
+class Child extends java.lang.Object
+{
+
+    void <init>()
+    {
+        Child r0;
+
+        r0 := @this: Child;
+
+        specialinvoke r0.<java.lang.Object: void <init>()>();
+
+        return;
+    }
+
+    public void baz(TestNode, TestNode)
+    {
+        TestNode r0, $r1, r3;
+        Child r2;
+
+        r2 := @this: Child;
+
+        r3 := @parameter0: TestNode;
+
+        r0 := @parameter1: TestNode;
+
+        $r1 = new TestNode;
+
+        specialinvoke $r1.<TestNode: void <init>()>();
+
+        r0.<TestNode: TestNode f> = $r1;
+
+        return;
+    }
+}
